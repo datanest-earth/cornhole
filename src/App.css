@@ -1,0 +1,281 @@
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+  min-height: 100svh;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin: 0 0 4px;
+  font-size: 12px;
+}
+
+.app-header h1 {
+  margin: 0 0 16px;
+  font-size: 42px;
+  letter-spacing: -0.04em;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background: var(--bg-raise);
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.tabs button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+
+.tabs button.active {
+  background: var(--wood);
+  color: #1a140c;
+  font-weight: 700;
+}
+
+.lede {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.setup-grid,
+.round-input {
+  display: grid;
+  gap: 12px;
+}
+
+.setup-screen,
+.game-screen,
+.history-screen {
+  display: grid;
+  gap: 16px;
+}
+
+.team-card,
+.score-card,
+.bag-stepper,
+.history-list li,
+.winner-banner {
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.team-red,
+.score-card.team-red,
+.bag-stepper.team-red {
+  background: linear-gradient(180deg, #9b2b22, var(--red-dark));
+}
+
+.team-blue,
+.score-card.team-blue,
+.bag-stepper.team-blue {
+  background: linear-gradient(180deg, #2f6cb0, var(--blue-dark));
+}
+
+.team-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+}
+
+.team-card h2,
+.score-card h2,
+.bag-stepper h3 {
+  margin: 0 0 12px;
+}
+
+.team-card fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.player-fields {
+  display: grid;
+  gap: 10px;
+}
+
+.player-fields label,
+.setup-screen button,
+.game-actions button,
+.history-header button,
+.round-input .primary {
+  display: grid;
+  gap: 4px;
+}
+
+.player-fields input {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+button[type='submit'],
+.round-input .primary {
+  background: var(--wood);
+  color: #1a140c;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px;
+  font-weight: 700;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.score {
+  font-size: 56px;
+  margin: 0;
+  line-height: 1;
+}
+
+.to-win {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin: 0;
+  color: var(--accent);
+  align-self: center;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.stepper-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.stepper-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepper-controls button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  font-size: 22px;
+}
+
+.remaining {
+  margin: 8px 0 0;
+  opacity: 0.85;
+}
+
+.winner-banner {
+  background: var(--accent);
+  color: #1a140c;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.round-log {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--muted);
+}
+
+.game-actions,
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.game-actions button,
+.history-header button {
+  background: var(--bg-raise);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.history-list li {
+  background: var(--bg-raise);
+}
+
+.history-teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.history-teams .team-red,
+.history-teams .team-blue {
+  background: none;
+  padding: 0;
+}
+
+.history-teams .team-red {
+  color: #ffb4ab;
+}
+
+.history-teams .team-blue {
+  color: #9ec5ff;
+  text-align: right;
+}
+
+.history-meta {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .scoreboard {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .to-win {
+    grid-column: 1 / -1;
+    writing-mode: horizontal-tb;
+    text-align: center;
+  }
+}
