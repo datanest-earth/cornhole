@@ -72,6 +72,11 @@ export function GameScreen({
   const [redBags, setRedBags] = useState<BagCounts>(emptyBags)
   const [blueBags, setBlueBags] = useState<BagCounts>(emptyBags)
   const over = Boolean(game.winner)
+  const winningPlayers =
+    game.winner === 'red' ? game.red.players : game.winner === 'blue' ? game.blue.players : []
+  const winnerLabel = winningPlayers.length
+    ? `${formatTeamName(winningPlayers)} ${winningPlayers.length === 1 ? 'wins' : 'win'}!`
+    : ''
 
   return (
     <section className="game-screen" data-testid="game-screen">
@@ -93,8 +98,7 @@ export function GameScreen({
 
       {over ? (
         <div className="winner-banner" data-testid="winner-banner">
-          {game.winner === 'red' ? formatTeamName(game.red.players) : formatTeamName(game.blue.players)}{' '}
-          win{game.winner === 'red' && game.red.players.length === 1 ? 's' : ''}!
+          {winnerLabel}
         </div>
       ) : (
         <div className="round-input">
