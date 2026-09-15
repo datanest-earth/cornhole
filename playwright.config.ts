@@ -7,12 +7,12 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
-    baseURL: 'http://127.0.0.1:5173',
+    baseURL: 'http://127.0.0.1:5173/cornhole/',
     trace: 'on-first-retry',
   },
   webServer: {
     command: 'bun run dev -- --host 127.0.0.1 --port 5173',
-    url: 'http://127.0.0.1:5173',
+    url: 'http://127.0.0.1:5173/cornhole/',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },

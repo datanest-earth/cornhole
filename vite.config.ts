@@ -3,6 +3,8 @@ import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  // Project Pages site: https://datanest-earth.github.io/cornhole/
+  base: '/cornhole/',
   plugins: [
     react(),
     VitePWA({
@@ -16,7 +18,8 @@ export default defineConfig({
         background_color: '#14241c',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
+        start_url: './',
+        scope: './',
         icons: [
           {
             src: 'pwa-192.png',
